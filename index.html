@@ -12,7 +12,7 @@
                 <br/>
                 <input type="text" id="barcodeValue2" name="barcodeValue"/>
                 <br/>
-                <button id = "scanBarcode2">SCAN git</button>
+                <button id = "scanBarcode2">SCAN GIT</button>
             </div>
         </div>
         
@@ -21,9 +21,14 @@
 
         function scan_activity2(){
             alert("1");
-            PluginName.new_activity();
+            //PluginName.new_activity();
+            Cordova.exec(function success(result){                
+                 document.getElementById("barcodeValue").value = result;
+             }, null, "PluginName", "new_activity", null);
         }
         </script> 
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
 
