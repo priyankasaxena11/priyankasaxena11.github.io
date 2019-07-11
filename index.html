@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Denso Scanner UI</title>
-</head>
-<body>
 
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
- 
- <div id="deviceready" align="center">
- 
-   <h1>Scan Barcodes</h1>
-   
-   <table>
-	   <tr><td><input type="text" id="barcodeValue" name="barcodeValue"/></td></tr>
-	   <tr><td><button id="scanBarcode" name="scanBarcode">SCAN</button></td></tr>
-   </table>
- </div>
- 
-</body>
+<html>
+    <head>       
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Hello World Git</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+            <div>
+                <br/><br/>
+                <input type="text" id="barcodeValue" name="barcodeValue"/>
+                <br/><br/>
+                <button id = "scanBarcode">SCAN git</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
 </html>
+
