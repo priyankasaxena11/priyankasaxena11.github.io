@@ -9,18 +9,18 @@
             <h3>Denso Scanner</h3>
             <div>
                 <br/>
-                <input type="text" id="barcodeValue" name="barcodeValue"/>
+                <input type="text" id="barcodeValue2"/>
                 <br/>
-                <button id = "scanBarcode">SCAN REMOTE URL</button>
+                <button id = "scanBarcode2">SCAN REMOTE_URL</button>
             </div>
         </div>      
        <script>
-           document.getElementById("scanBarcode").addEventListener("click", scan_activity);  
+           document.getElementById("scanBarcode2").addEventListener("click", scan_activity2);  
            
-           function scan_activity(){
+           function scan_activity2(){
             Cordova.exec(function success(result){
                  debugger;
-                 document.getElementById("barcodeValue").value = result;
+                 document.getElementById("barcodeValue2").value = result;
              }, null, "PluginName", "new_activity", null);
 
         }
