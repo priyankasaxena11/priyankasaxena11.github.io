@@ -20,13 +20,9 @@
         document.getElementById("scanBarcode2").addEventListener("click", scan_activity2);
 
         function scan_activity2(){
-            alert("1");
-            //PluginName.new_activity();
-            Cordova.exec(function success(result){                
-                 document.getElementById("barcodeValue").value = result;
-             }, null, "PluginName", "new_activity", null);
+            PluginName.new_activity();            
         }
-        </script> 
+        </script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
