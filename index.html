@@ -2,7 +2,6 @@
 
 <html>
     <head>       
-        <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Hello World Git</title>
     </head>
     <body>
@@ -15,9 +14,9 @@
                 <button id = "scanBarcode">SCAN GIT</button>
             </div>
         </div>      
-       
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+       <script>
+           document.getElementById("scanBarcode").addEventListener("click", scan_activity);
+        </script>
     </body>
 </html>
 
