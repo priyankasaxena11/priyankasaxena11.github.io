@@ -15,16 +15,19 @@
             </div>
         </div>      
        <script>
-           document.getElementById("scanBarcode2").addEventListener("click", scan_activity2);  
+           document.getElementById("scanBarcode2").addEventListener("click", startScanActivity);  
            
-           function scan_activity2(){
+           /*function startScanActivity(){
             Cordova.exec(function success(result){
                  debugger;
                  document.getElementById("barcodeValue2").value = result;
              }, null, "PluginName", "new_activity", null);
-
-        }
+            }*/
+           
         </script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="cordova_plugins.js"></script>
+        <script type="text/javascript" src="scan_activity.js"></script>
     </body>
 </html>
 
