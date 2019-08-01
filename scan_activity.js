@@ -1,7 +1,7 @@
 document.getElementById("scanBarcode2").addEventListener("click", startScanActivity);  
 
 function setFocusOnNext(elementName){
-    documant.getElementById(elementName).focus();    
+    document.getElementById(elementName).focus();    
 }
 
 function setBarcodeValue(){
