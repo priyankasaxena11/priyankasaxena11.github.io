@@ -6,8 +6,9 @@ function setFocusOnNext(elementName){
 
 function setBarcodeValue(){
     var barcodeVal = document.getElementById("barcodeValueHidden").value;
+    console.log("barcodeVal" + barcodeVal);
     var input_focused = document.activeElement === input && document.hasFocus();
-    documant.getElementById(input_focused).value = barcodeVal;
+    document.getElementById(input_focused).value = barcodeVal;
 }
 
 function startScanActivity(){
