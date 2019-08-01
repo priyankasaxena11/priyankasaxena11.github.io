@@ -9,7 +9,8 @@
             <h3>Pharmhos - Denso Scanner Test</h3>
             <div>
                 <br/>
-                <input type="text" id="barcodeValue2" onChange="c('barcodeValue3')"/>
+                <input type="text" id="barcodeValueHidden" onChange="setBarcodeValue()"/>
+                <input type="text" id="barcodeValue2" onChange="setFocusOnNext('barcodeValue3')"/>
                 <br/>
                 <input type="text" id="barcodeValue3"/>
                 <br/>
