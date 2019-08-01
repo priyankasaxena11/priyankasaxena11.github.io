@@ -1,4 +1,5 @@
-document.getElementById("scanBarcode2").addEventListener("click", startScanActivity);  
+//document.getElementById("scanBarcode2").addEventListener("click", startScanActivity);  
+startScanActivity();
 
 function setFocusOnNext(elementName){
     document.getElementById(elementName).focus();    
