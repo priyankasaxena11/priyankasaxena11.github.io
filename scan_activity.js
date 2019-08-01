@@ -15,5 +15,5 @@ function startScanActivity(){
     console.log("inside scanner");
     Cordova.exec(function success(result){
          document.getElementById("barcodeValueHidden").value = result;
-     }, null, "PluginName", "new_activity", null);
+     }, null, "PluginDensoScanner", "scan_activity", null);
 }
