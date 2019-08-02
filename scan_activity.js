@@ -1,7 +1,6 @@
 
 window.onload = function(e){ 
-    console.log("Start scan activity");
-    document.getElementById("barcodeValue1").focus();
+    console.log("Start scan activity");    
     //startScanActivity();
 }
 
@@ -9,6 +8,7 @@ document.getElementById("initScan").addEventListener("click", initialiseScanner)
 
 function initialiseScanner(){
     console.log("init scanner");
+    document.getElementById("barcodeValue1").focus();
     Cordova.exec(null, null, "PluginName", "scan_activity", null);
 }
 
