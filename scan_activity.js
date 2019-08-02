@@ -9,6 +9,11 @@ function setFocusOnNext(elementName){
     document.getElementById(elementName).focus();    
 }
 
+function init(val) {
+    console.log("Value received " + val);
+    document.getElementById("barcodeValue1").value = val;
+ }
+
 /*document.getElementById("initScan").addEventListener("click", initialiseScanner);  
 
 function initialiseScanner(){
