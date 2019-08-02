@@ -12,6 +12,7 @@ function setFocusOnNext(elementName){
 function init(val) {
     console.log("Value received " + val);
     document.getElementById("barcodeValue1").value = val;
+    showScanResult();
  }
 
 function showScanResult() {
