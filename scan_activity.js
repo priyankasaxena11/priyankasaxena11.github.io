@@ -11,7 +11,7 @@ function initialiseScanner(){
     console.log("init scanner");
     document.getElementById("barcodeValue1").focus();
     Cordova.exec(null, null, "PluginName", "scan_activity", null);
-}*/
+}
 
 function setFocusOnNext(elementName){
     document.getElementById(elementName).focus();    
@@ -30,4 +30,4 @@ function startScanActivity(){
     Cordova.exec(function success(result){
          document.getElementById("barcodeValue1").value = result;
      }, null, "PluginName", "scan_activity", null);
-}
+}*/
