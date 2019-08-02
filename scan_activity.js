@@ -14,6 +14,14 @@ function init(val) {
     document.getElementById("barcodeValue1").value = val;
  }
 
+function showScanResult() {
+        var scanResult = denso.scanResult();
+        if(!scanResult)
+            denso.showToast("Nothing had been scanned");
+        else 
+            denso.showToast(denso.scanResult());
+    }
+
 /*document.getElementById("initScan").addEventListener("click", initialiseScanner);  
 
 function initialiseScanner(){
