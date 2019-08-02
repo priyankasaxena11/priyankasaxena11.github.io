@@ -1,4 +1,8 @@
- startScanActivity();
+
+window.onload = function(e){ 
+    console.log("Start scan activity");
+    startScanActivity();
+}
 
 //document.getElementById("scanBarcode2").addEventListener("click", startScanActivity);  
 
