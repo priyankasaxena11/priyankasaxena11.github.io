@@ -2,10 +2,15 @@
 window.onload = function(e){ 
     console.log("Start scan activity");
     document.getElementById("barcodeValue1").focus();
-    startScanActivity();
+    //startScanActivity();
 }
 
-//document.getElementById("scanBarcode2").addEventListener("click", startScanActivity);  
+document.getElementById("initScan").addEventListener("click", initialiseScanner);  
+
+function initialiseScanner(){
+    console.log("init scanner");
+    Cordova.exec(null, null, "PluginName", "scan_activity", null);
+}
 
 function setFocusOnNext(elementName){
     document.getElementById(elementName).focus();    
@@ -17,6 +22,7 @@ function setBarcodeValue(){
     var input_focused = document.activeElement === input && document.hasFocus();
     document.getElementById(input_focused).value = barcodeVal;
 }
+
 
 function startScanActivity(){
     console.log("inside scanner");
