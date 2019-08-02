@@ -1,6 +1,7 @@
 
 window.onload = function(e){ 
     console.log("Start scan activity");
+    document.getElementById("barcodeValue1").focus();
     startScanActivity();
 }
 
@@ -11,7 +12,7 @@ function setFocusOnNext(elementName){
 }
 
 function setBarcodeValue(){
-    var barcodeVal = document.getElementById("barcodeValueHidden").value;
+    var barcodeVal = document.getElementById("barcodeValue1").value;
     console.log("barcodeVal" + barcodeVal);
     var input_focused = document.activeElement === input && document.hasFocus();
     document.getElementById(input_focused).value = barcodeVal;
@@ -20,6 +21,6 @@ function setBarcodeValue(){
 function startScanActivity(){
     console.log("inside scanner");
     Cordova.exec(function success(result){
-         document.getElementById("barcodeValueHidden").value = result;
+         document.getElementById("barcodeValue1").value = result;
      }, null, "PluginName", "scan_activity", null);
 }
