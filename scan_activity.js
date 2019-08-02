@@ -1,6 +1,7 @@
 
 window.onload = function(e){ 
-    console.log("Start scan activity");    
+    console.log("Start scan activity");
+    document.getElementById("barcodeValue1").focus();
     //startScanActivity();
 }
 
