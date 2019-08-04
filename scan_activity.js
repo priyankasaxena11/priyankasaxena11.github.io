@@ -9,6 +9,12 @@ function setFocusOnNext(elementName){
     document.getElementById(elementName).focus();    
 }
 
+function getBarcode() {
+	var string = "00000000";
+	string = window.denso.getBarcode();
+	document.getElementById('barcodeValue1').innerHTML = string;
+}
+
 function init(val) {
     console.log("Value received " + val);
     document.getElementById("barcodeValue1").value = val;
@@ -23,6 +29,8 @@ function showScanResult(val) {
         else 
             denso.showToast(denso.scanResult());
     }
+
+document.getElementById("getBarcode").addEventListener("click", getBarcode);  
 
 /*document.getElementById("initScan").addEventListener("click", initialiseScanner);  
 
