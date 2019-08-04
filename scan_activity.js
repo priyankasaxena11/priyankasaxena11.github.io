@@ -15,7 +15,8 @@ function init(val) {
     showScanResult();
  }
 
-function showScanResult() {
+function showScanResult(val) {
+        console.log("Value received here " + val);
         var scanResult = denso.scanResult();
         if(!scanResult)
             denso.showToast("Nothing had been scanned");
