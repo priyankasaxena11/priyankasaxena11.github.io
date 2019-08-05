@@ -21,14 +21,9 @@ function setResult(barcodeVal) {
     if(document.activeElement != null && document.hasFocus()) {
 	 var input_focused = document.activeElement;
 	 input_focused.value = barcodeVal;
-	 setFocusOnNextElement();
+	 input_focused.blur();
     }
  }
 
-function setFocusOnNextElement(){
-	var tab = $(this).attr("tabindex");
-	tab++;
-	$("[tabindex='"+tab+"']").focus();
-}
 
 
