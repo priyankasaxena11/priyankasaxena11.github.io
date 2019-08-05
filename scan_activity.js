@@ -17,40 +17,17 @@ function getBarcode() {
 
 function setResult(val) {
     console.log("Value received: " + val);
-    document.getElementById("barcodeValue1").value = val;  
-     console.log("Value Set");
- }
-
-function showScanResult(val) {
-        console.log("Value received here " + val);
-        var scanResult = denso.scanResult();
-        if(!scanResult)
-            denso.showToast("Nothing had been scanned");
-        else 
-            denso.showToast(denso.scanResult());
-    }
-
-document.getElementById("getBarcode").addEventListener("click", getBarcode);  
-
-/*document.getElementById("initScan").addEventListener("click", initialiseScanner);  
-
-function initialiseScanner(){
-    console.log("init scanner");
-    document.getElementById("barcodeValue1").focus();
-    Cordova.exec(null, null, "PluginName", "scan_activity", null);
-}
-
-function setBarcodeValue(){
-    var barcodeVal = document.getElementById("barcodeValue1").value;
-    console.log("barcodeVal" + barcodeVal);
+    //document.getElementById("barcodeValue1").value = val;  
     var input_focused = document.activeElement === input && document.hasFocus();
     document.getElementById(input_focused).value = barcodeVal;
-}
+ }
+
+$(document).ready(function(){
+    $('input').on("input", function(){
+        if($(this).val().length > 0){
+            $(this).next().focus();
+        }
+    });
+});
 
 
-function startScanActivity(){
-    console.log("inside scanner");
-    Cordova.exec(function success(result){
-         document.getElementById("barcodeValue1").value = result;
-     }, null, "PluginName", "scan_activity", null);
-}*/
