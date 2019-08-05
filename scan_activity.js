@@ -26,7 +26,7 @@ function setResult(barcodeVal) {
  }
 
 $(document).ready(function(){
-    $('input').keyup(function(){
+    $('input').blur(function(){
         if(this.value.length > 0){
             $(this).next().focus();
         }
