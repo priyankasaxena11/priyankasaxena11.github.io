@@ -6,7 +6,7 @@ window.onload = function(e){
 
 function setFocusOnNext(elementName){
     console.log("Next element " + elementName);
-    document.getElementById(elementName).focus();    
+    //document.getElementById(elementName).focus();    
 }
 
 function getBarcode() {
