@@ -15,9 +15,9 @@ function getBarcode() {
 	document.getElementById('barcodeValue1').value = string;
 }
 
-function setResult(val) {
-    console.log("Value received: " + val);
-    //document.getElementById("barcodeValue1").value = val;  
+function setResult(barcodeVal) {
+    console.log("Barcode Value received: " + barcodeVal);
+    //document.getElementById("barcodeValue1").value = barcodeVal;  
     if(document.activeElement != null && document.hasFocus()) {
 	 var input_focused = document.activeElement;
 	 input_focused.value = barcodeVal;
