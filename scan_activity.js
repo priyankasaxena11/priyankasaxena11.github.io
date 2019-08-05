@@ -25,5 +25,13 @@ function setResult(barcodeVal) {
     }
  }
 
+$(document).ready(function(){
+    $('input').keyup(function(){
+        if(this.value.length > 0){
+            $(this).next().focus();
+        }
+    });
+});
+
 
 
