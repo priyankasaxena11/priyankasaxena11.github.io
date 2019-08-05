@@ -11,14 +11,14 @@ function setFocusOnNext(elementName){
 
 function getBarcode() {
 	var string = window.denso.getBarcode();
-	console.log("Value received " + string);
+	console.log("Barcode received " + string);
 	document.getElementById('barcodeValue1').value = string;
 }
 
-function init(val) {
-    console.log("Value received " + val);
-    document.getElementById("barcodeValue1").value = val;
-    showScanResult();
+function setResult(val) {
+    console.log("Value received: " + val);
+    document.getElementById("barcodeValue1").value = val;  
+     console.log("Value Set");
  }
 
 function showScanResult(val) {
