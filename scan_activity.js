@@ -12,7 +12,8 @@ function setFocusOnNext(elementName){
 function getBarcode() {
 	var string = "00000000";
 	string = window.denso.getBarcode();
-	document.getElementById('barcodeValue1').innerHTML = string;
+	console.log("Value received " + string);
+	document.getElementById('barcodeValue1').value = string;
 }
 
 function init(val) {
