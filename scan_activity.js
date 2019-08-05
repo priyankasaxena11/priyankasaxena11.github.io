@@ -4,9 +4,11 @@ window.onload = function(e){
     document.getElementById("barcodeValue1").focus();
 }
 
-function setFocusOnNext(elementName){
-    console.log("Next element " + elementName);
-    //document.getElementById(elementName).focus();    
+function setFocusOnNext(this, elementName){
+	if(this.value.length > 0) {
+	    console.log("Next element " + elementName);
+	    document.getElementById(elementName).focus();    
+	}
 }
 
 function getBarcode() {
@@ -24,15 +26,6 @@ function setResult(barcodeVal) {
 	 input_focused.blur();
     }
  }
-
-$(document).ready(function(){
-    $('input').blur(function(){
-	    console.log("Element value " + this.value);
-        if(this.value.length > 0){
-            $(this).next().focus();
-        }
-    });
-});
 
 
 
