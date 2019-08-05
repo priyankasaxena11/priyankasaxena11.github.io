@@ -27,6 +27,7 @@ function setResult(barcodeVal) {
 
 $(document).ready(function(){
     $('input').blur(function(){
+	    console.log("Element value " + this.value);
         if(this.value.length > 0){
             $(this).next().focus();
         }
