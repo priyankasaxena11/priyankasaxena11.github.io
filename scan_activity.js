@@ -18,8 +18,10 @@ function getBarcode() {
 function setResult(val) {
     console.log("Value received: " + val);
     //document.getElementById("barcodeValue1").value = val;  
-    var input_focused = document.activeElement === input && document.hasFocus();
-    document.getElementById(input_focused).value = barcodeVal;
+    if(document.activeElement != null && document.hasFocus()) {
+	 var input_focused = document.activeElement;
+	 input_focused.value = barcodeVal;
+    }
  }
 
 $(document).ready(function(){
