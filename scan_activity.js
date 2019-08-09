@@ -4,11 +4,9 @@ window.onload = function(e){
     document.getElementById("barcodeValue1").focus();
 }
 
-function setFocusOnNext(this, elementName){
-	if(this.value.length > 0) {
-	    console.log("Next element " + elementName);
-	    document.getElementById(elementName).focus();    
-	}
+function setFocusOnNext(elementName){
+	console.log("Next element " + elementName);
+	document.getElementById(elementName).focus();    
 }
 
 function getBarcode() {
